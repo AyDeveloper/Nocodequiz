@@ -1,0 +1,152 @@
+/* global style */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background:#f4faff;
+    padding: 20px 15px;
+}
+
+header{
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.goback {
+    position: absolute;
+    top: 0.9rem;
+    left: 1rem;
+    transition: all 0.4s ease-in;
+}
+
+.goback:hover {
+    border-radius: 50%;
+    top: 0.5rem;
+    background: teal;
+    padding: 8px;
+}
+
+.goback:hover i {
+    color: white;
+}
+
+.goback i {
+    font-size: 1.3rem;
+    color: teal;
+}
+
+header h1 {
+    color: teal;
+    font-size: 2.4rem;
+    text-align: center;
+}
+
+.result {
+    padding: 10px 0;
+    text-align: center;
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.result p {
+    width:70%;
+    margin:0.1rem auto;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+}
+
+.result p > span {
+    font-size: 1.6rem;
+    color: teal;
+    font-style: oblique;
+    opacity: 0.8;
+}
+
+.mainForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mainForm .questions {
+    position: relative;
+    padding: 20px 15px 30px;
+    box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.2);
+    margin-top:20px;
+    transition: all 0.4s ease-in;
+    border-radius: 8px;
+}
+
+.mainForm .questions:hover {
+    transform: scale(1.02);
+}
+
+.questions p {
+    font-size: 1.3rem;
+    padding-bottom: 15px;
+    letter-spacing: .2px;
+    color: teal;
+    opacity: 0.7;
+}
+.answer {
+    padding: 8px 5px;
+}
+
+.answer input {
+    cursor: pointer;
+}
+
+.answer label {
+    font-size: 1.2rem;
+    color: #333;
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.submit{
+    margin: 20px 0;
+}
+
+.submit input {
+    padding: 8px 15px;
+    border: transparent;
+    background: teal;
+    color: white;
+    border-radius: 8px;
+    transition: all 0.4s ease-in;
+    cursor: pointer;
+    outline: none;
+}
+
+.submit input:hover {
+    border: 1.5px solid teal;
+    background: transparent;
+    color: teal;
+}
+
+
+@media screen and (min-width:1280px) {
+    .mainForm {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .submit{
+        position: absolute;
+        top: 480px;
+        left: 640px;
+        padding-bottom: 20px;
+    }
+}

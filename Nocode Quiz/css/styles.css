@@ -1,0 +1,329 @@
+/* global style */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: #333;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* start of mobile style*/
+.main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    padding: 10px 15px;
+    background:#f4faff;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    margin-bottom:2rem ;
+}
+
+.header h1 {
+    font-size: 1.55rem;
+    color:teal;
+    opacity: .8;
+}
+
+.toggle i {
+    font-size: 1.65rem;
+    color:teal;
+    opacity: .8;
+    cursor: pointer;
+}
+
+ h2 {
+    color: teal;
+    font-size: 2rem;
+}
+
+.introduction p {
+    font-size: 1.3rem;
+    white-space: normal;
+    line-height: 2.3rem;
+    letter-spacing: 1.3px;
+}
+
+.article-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.article-container article {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 20px 15px;
+    margin: 25px 0;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: drop-shadow(0.4px);
+    transition: border 0.9s ease-in-out;
+    opacity: 0.85;
+}
+
+.article-container article:hover {
+    border: 1px solid teal;
+    opacity: 1;
+}
+.article-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .8rem;
+}
+
+.article-head span {
+    padding: .5rem;
+    border-radius: 50%;
+}
+
+.wp-head span {
+    border: 2px solid orange;
+}
+.wix-head span {
+    border: 2px solid crimson;
+}
+.squarespace-head span {
+    border: 2px solid lime;
+}
+.webflow-head span {
+    border: 2px solid rebeccapurple;
+}
+.godaddy-head span {
+    border: 2px solid #33ff;
+}
+
+.article-head span i {
+    font-size: 2rem;
+}
+
+.article-container article .content p{
+    font-size: 1.28rem;
+    padding: 20px 0;
+    letter-spacing: .5px;
+}
+
+button {
+    padding: 10px 15px;
+    border: transparent;
+    background-color: teal;
+    font-size: 1.1rem;
+    color: white;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.5s ease-in;
+}
+
+button > span {
+    margin-left: 10px;
+}
+
+button > span i {
+    color: white;
+    font-size: 1.1rem;
+}
+
+button:hover {
+    background: none;
+    border: 1px solid teal;
+    color: teal;
+    transform: translateY(5px);
+}
+
+button:hover  > span i  {
+    color: teal;
+}
+
+.proceed-main{
+    text-align: center;
+}
+
+.proceed {
+    font-size: 1.25rem;
+    text-align: center;
+    margin: 10px 0;
+    align-items: center;
+    transition: all 0.4s ease-in;
+}
+
+.proceed:hover {
+    border:2px solid teal ;
+    padding: 5px;
+}
+
+.proceed span {
+    margin-left: 1rem;
+}
+
+.proceed span i {
+    font-size: 1rem;
+
+}
+/* end of mobile style*/
+
+/* fixed navigation  */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    background: white;
+    z-index: 99;
+    display: grid;
+    grid-template-rows: 20px 400px;
+    row-gap: 35px;
+    padding: 10px 15px;
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.1);
+    transform: translateX(-2000px);
+    transform-origin: left;
+    transition: all 0.5s ease-in-out;
+}
+
+.active {
+    color: teal;
+}
+
+.nav-show {
+    transform: translateX(0px);
+}
+
+.nav-logo {
+    position: relative;
+}
+
+.nav-logo p {
+    color: teal;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.nav-logo span {
+    position: absolute;
+    top:0;
+    right: 0;
+}
+
+.nav-logo span i {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+li {
+    display: block;
+    padding: 15px 0px;
+}
+
+ul li a {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+}
+
+@media screen and (min-width:768px) {
+    .nav {
+        width: 45%;
+    }
+
+    ul li a {
+        font-size: 1.6rem;
+    }
+
+    .nav-logo p {
+        font-size: 1.6rem;
+    }
+
+    .nav-logo span i {
+        font-size: 2rem;
+    }
+}
+
+/*end of fixed nav*/
+.mainNav {
+    display: none;
+}
+
+@media screen and (min-width:1280px) {
+    /*Start of desktop version*/
+.main{
+    position: relative;
+    width: 100%;
+}
+
+.mainNav {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
+    padding: 20px 30px;
+}
+
+.mainHeader {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75%;
+    margin-left: 22%;
+    padding: 20px 5px;
+}
+
+
+.mainNav-nav-logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.mainNav-nav-logo p {
+    font-size: 1.4rem;
+    color: teal;
+    opacity: .7;
+}
+
+.mainNav-nav-logo span  {
+   display: none;
+}
+
+.mainNav ul {
+    margin-top: 2rem;
+}
+
+.mainNav ul li {
+    padding: 20px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.mainNav ul li a {
+    color: teal;
+    opacity: .8;
+    color: #333;
+    transition: all 0.3s ease-in-out;
+}
+
+.mainNav ul li:hover {
+    transform: translateY(-5px);
+}
+
+.toggle {
+    display: none;
+}
+
+/*End of desktop version*/    
+}
